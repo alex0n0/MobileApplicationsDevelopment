@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">navigationdrawertest</string>
+    <string name="activity_2_string1">fragment: activity_2</string>
+</resources>
