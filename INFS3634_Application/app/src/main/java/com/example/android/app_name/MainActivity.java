@@ -15,4 +15,6 @@ public class MainActivity extends AppCompatActivity {
         TextView tv_1 = (TextView) findViewById(R.id.tv_1);
         tv_1.setText("put some text here");
     }
+
+    // Test
 }
