@@ -1,4 +1,6 @@
-package com.example.android.app_name;
+//package com.example.android.app_name;
+package com.INFS3634test1.app_name;
+
 import java.util.List;
 
 public class searchResult {
