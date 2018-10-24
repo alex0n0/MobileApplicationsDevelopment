@@ -20,14 +20,31 @@ public class topicAdapter extends ArrayAdapter {
     //to store the list of countries
     private final String[] topicHeadingLevelTwoArray;
 
+    //to store the list of countries
+    private final String[] topicContent;
 
-    public topicAdapter(Activity context, String[] topicHeadingLevelOneArray, String[] topicHeadingLevelTwoArray) {
+
+
+
+    //public topicAdapter(Activity context, String[] topicHeadingLevelOneArray, String[] topicHeadingLevelTwoArray) {
+
+       // super(context, R.layout.topic_activity_listview_row, topicHeadingLevelOneArray);
+
+       // this.context = context;
+       // this.topicHeadingLevelOneArray = topicHeadingLevelOneArray;
+       // this.topicHeadingLevelTwoArray = topicHeadingLevelTwoArray;
+
+   // }
+
+    public topicAdapter(Activity context, String[] topicHeadingLevelOneArray, String[] topicHeadingLevelTwoArray,
+                        String[] topicContent) {
 
         super(context, R.layout.topic_activity_listview_row, topicHeadingLevelOneArray);
 
         this.context = context;
         this.topicHeadingLevelOneArray = topicHeadingLevelOneArray;
         this.topicHeadingLevelTwoArray = topicHeadingLevelTwoArray;
+        this.topicContent = topicContent;
 
     }
 
