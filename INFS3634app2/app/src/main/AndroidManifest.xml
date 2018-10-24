@@ -30,6 +30,10 @@
         <activity
             android:name="com.INFS3634test1.navigationDrawer.SearchActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.INFS3634test1.navigationDrawer.topicDetail"
+            android:screenOrientation="portrait" />
+
 
     </application>
 

@@ -49,10 +49,12 @@ public class NavigationDrawerBaseActivity extends AppCompatActivity {
 
     @Override
     public void setContentView(int layout) { //This constructs the navigation drawer and its functions.
+
         View parentView = LayoutInflater.from(NavigationDrawerBaseActivity.this).inflate(R.layout.activity_main, null);
         FrameLayout frame = (FrameLayout) parentView.findViewById(R.id.frame);
         getLayoutInflater().inflate(layout, frame, true);
         super.setContentView(parentView);
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         appBarTxt = (TextView) findViewById(R.id.app_bar_txt);
         imgLeftToolbar = (ImageView) findViewById(R.id.img_left_toolbar); //Connects the different xml layouts to each item of the navigation.
@@ -61,6 +63,7 @@ public class NavigationDrawerBaseActivity extends AppCompatActivity {
         drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         setUpNavigationView();
+
         Log.i(TAG_N, "Navigation views set.");
         drawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.open_drawer, R.string.close_drawer) {
             public void onDrawerSlide(View drawerView, float slideOffset) {
@@ -132,6 +135,7 @@ public class NavigationDrawerBaseActivity extends AppCompatActivity {
                         startActivity(new Intent(NavigationDrawerBaseActivity.this, HomeActivity.class));
                         finish();
                         break;
+
                     case R.id.nav_topic:
                         startActivity(new Intent(NavigationDrawerBaseActivity.this, TopicActivity.class));
                         finish();
@@ -141,6 +145,7 @@ public class NavigationDrawerBaseActivity extends AppCompatActivity {
                         startActivity(new Intent(NavigationDrawerBaseActivity.this, VideoActivity.class));
                         finish();
                         break;
+
                     case R.id.nav_quiz:
                         startActivity(new Intent(NavigationDrawerBaseActivity.this, QuizActivity.class));
                         finish();
