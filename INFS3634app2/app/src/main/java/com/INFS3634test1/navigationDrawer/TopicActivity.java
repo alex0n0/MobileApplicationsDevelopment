@@ -147,9 +147,6 @@ public class TopicActivity extends NavigationDrawerBaseActivity {
                 "Insert Summary",
         };
 
-
-
-
         topicAdapter newTopicAdapter = new topicAdapter(this, topicHeadingLevelOneArray, topicHeadingLevelTwoArray, topicContent);
         listView = (ListView) findViewById(R.id.lv_main);
         listView.setAdapter(newTopicAdapter);
