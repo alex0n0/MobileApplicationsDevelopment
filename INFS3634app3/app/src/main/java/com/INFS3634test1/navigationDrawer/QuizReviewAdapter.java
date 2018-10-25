@@ -51,9 +51,35 @@ public class QuizReviewAdapter extends RecyclerView.Adapter<QuizReviewAdapter.Qu
         Quiz current = mQuiz.get(position);
 
         holder.tv_review_question.setText(current.toString());
-        holder.tv_review_result.setText(mQuizResults[position] ? "correct" : "incorrect");
-        holder.tv_review_answer.setText(String.valueOf(current.getAnswer()));
-        holder.tv_review_explanation.setText(current.getExplanation());
+        holder.tv_review_result.setText(mQuizResults[position] ? "Correct" : "Incorrect");
+        String answer;
+        switch (current.getAnswer()) {
+            case 1:
+                answer = "Answer: " + current.getOption1();
+                break;
+            case 2:
+                answer = "Answer: " + current.getOption2();
+                break;
+            case 3:
+                answer = "Answer: " + current.getOption3();
+                break;
+            case 4:
+                answer = "Answer: " + current.getOption4();
+                break;
+            default:
+                answer = "should not appear";
+                break;
+        }
+
+        holder.tv_review_answer.setText(answer);
+        if (!current.getExplanation().equals("")) {
+            holder.tv_review_explanation.setVisibility(View.VISIBLE);
+            String explanation = "Explanation: " + current.getExplanation();
+            holder.tv_review_explanation.setText(explanation);
+        } else {
+            holder.tv_review_explanation.setVisibility(View.GONE);
+        }
+
 
     }
 
