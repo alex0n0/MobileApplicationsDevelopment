@@ -124,6 +124,12 @@ public abstract class QuizRoomDatabase extends RoomDatabase {
             quiz = new Quiz(30, 4, true, false, 3,"question 5", "random option 1", "random option 2", "random option 3", "random option 4", "something");
             mDao.insert(quiz);
 
+
+
+
+            quiz = new Quiz(0, 99, true, false, 1,"question 1", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+            mDao.insert(quiz);
+
             return null;
         }
     }

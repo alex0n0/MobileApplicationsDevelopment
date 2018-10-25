@@ -43,7 +43,7 @@ public class QuizViewModel extends AndroidViewModel {
             case 4:
                 return mTopic4Quiz;
             default:
-                return mTopic2Quiz;
+                return mTopic1Quiz;
         }
     }
 

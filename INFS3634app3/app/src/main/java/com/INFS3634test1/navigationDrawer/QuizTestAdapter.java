@@ -64,7 +64,9 @@ public class QuizTestAdapter extends RecyclerView.Adapter<QuizTestAdapter.QuizVi
 
 
         boolean isMcq = current.getIsMcq();
-        holder.tv_test_question.setText(current.toString());
+        String s = "";
+        s = "Question " + (position + 1) + "\n" + current.toString();
+        holder.tv_test_question.setText(s);
         holder.rb_test_a.setText(current.getOption1());
         holder.rb_test_b.setText(current.getOption2());
 
