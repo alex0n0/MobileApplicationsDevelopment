@@ -151,6 +151,11 @@ public class NavigationDrawerBaseActivity extends AppCompatActivity {
                         finish();
                         break;
 
+                    case R.id.nav_resources:
+                        startActivity(new Intent(NavigationDrawerBaseActivity.this, QuizActivity.class));
+                        finish();
+                        break;
+
                     case R.id.nav_search:
                         startActivity(new Intent(NavigationDrawerBaseActivity.this, SearchActivity.class));
                         finish();
