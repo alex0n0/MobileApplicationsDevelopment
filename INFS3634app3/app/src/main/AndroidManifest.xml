@@ -31,6 +31,9 @@
             android:name=".navigationDrawer.topicDetail"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".navigationDrawer.ResourcesActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".navigationDrawer.QuizSelectionActivity"
             android:label="@string/title_activity_quiz_test"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -39,6 +42,10 @@
         <activity
             android:name=".navigationDrawer.QuizReviewActivity"
             android:label="@string/title_activity_quiz_review"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".navigationDrawer.QuizReviewActivity$resources_activitysearch"
+            android:label="@string/title_activity_resources_activitysearch"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

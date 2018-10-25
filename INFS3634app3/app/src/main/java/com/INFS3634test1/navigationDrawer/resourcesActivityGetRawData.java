@@ -15,16 +15,36 @@ enum DownloadedStatus {IDLE, PROCESSING, NOT_STARTED, FAILED, OK}
 public class resourcesActivityGetRawData extends AsyncTask<String, Void, String> {
     private static final String TAG = "resourcesActivityGetRaw";
 
+    private final OnDownloadComplete mCallback;
     private DownloadedStatus mDownloadedStatus;
+    interface OnDownloadComplete {
+        void onDownloadComplete(String data, DownloadedStatus status);
+    }
 
-    public resourcesActivityGetRawData() {
+    public resourcesActivityGetRawData(OnDownloadComplete callback) {
         this.mDownloadedStatus = DownloadedStatus.IDLE;
+        mCallback = callback;
+    }
+
+    void runInSameThread(String s){
+        Log.d(TAG, "runInSameThread: starts");
+        // onPostExecute(doInBackground(s));
+
+        if(mCallback != null){
+            String result = doInBackground(s);
+            mCallback.onDownloadComplete(result,mDownloadedStatus);
+        }
+
+        Log.d(TAG, "runInSameThread: ends");
     }
 
     @Override
     protected void onPostExecute(String s) {
         Log.d(TAG, "onPostExecute: paramenter = " + s);
-
+        if(mCallback != null){
+            mCallback.onDownloadComplete(s, mDownloadedStatus);
+        }
+        Log.d(TAG, "onPostExecute: ends");
     }
 
     @Override
@@ -83,4 +103,5 @@ public class resourcesActivityGetRawData extends AsyncTask<String, Void, String>
 
         return null;
     }
+
 }
