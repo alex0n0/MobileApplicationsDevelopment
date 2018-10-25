@@ -1,5 +1,6 @@
 package com.INFS3634test1.navigationDrawer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +13,8 @@ import com.INFS3634test1.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.INFS3634test1.navigationDrawer.resourceBaseActivity.PHOTO_TRANSFER;
 
 public class ResourcesActivity extends NavigationDrawerBaseActivity implements resourcesActivityGetFlickrJsonData.OnDataAvailable,
         resourcesRecyclerItemOnClickListener.onRecyclerClickerListener {
@@ -71,7 +74,10 @@ public class ResourcesActivity extends NavigationDrawerBaseActivity implements r
     @Override
     public void onItemLongClick(View view, int position) {
         Log.d(TAG, "onItemLongClick: starts");
-        Toast.makeText(ResourcesActivity.this, "Long tap at position " + position, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(ResourcesActivity.this, "Long tap at position " + position, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, resourcesActivityPhoto.class);
+        intent.putExtra(PHOTO_TRANSFER, mResourcesRecyclerViewAdaper.getPhoto(position));
+        startActivity(intent);
 
     }
 }

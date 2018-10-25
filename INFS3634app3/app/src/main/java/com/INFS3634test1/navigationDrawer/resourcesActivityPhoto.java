@@ -1,7 +1,10 @@
 package com.INFS3634test1.navigationDrawer;
 
-public class resourcesActivityPhoto {
+import java.io.Serializable;
 
+class resourcesActivityPhoto implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String mTitle;
     private String mAuthor;
     private String mAuthorId;
@@ -14,6 +17,7 @@ public class resourcesActivityPhoto {
         mAuthor = author;
         mAuthorId = authorId;
         mLink = link;
+        mTags = tags;
         mTags = tags;
         mImage = image;
     }

@@ -155,7 +155,6 @@ public class TopicActivity extends NavigationDrawerBaseActivity {
                 "ubTyED3ZJVg",
                 "MvIlVsXxXmY&t",
 
-
         };
 
         topicAdapter newTopicAdapter = new topicAdapter(this, topicHeadingLevelOneArray, topicHeadingLevelTwoArray, topicContent);
