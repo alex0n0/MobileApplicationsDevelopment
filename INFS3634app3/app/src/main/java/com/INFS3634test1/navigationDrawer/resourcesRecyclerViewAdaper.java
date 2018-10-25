@@ -28,7 +28,7 @@ public class resourcesRecyclerViewAdaper extends RecyclerView.Adapter<resourcesR
     public FlickrImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // Called by the layout manager when it needs a new view
         Log.d(TAG, "onCreateViewHolder: new view requested");
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.resources_activity, parent, false); // where is the layout brows from???
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.resources_activity_recyclerview_item, parent, false); // where is the layout brows from???
         return new FlickrImageViewHolder(view);
     }
 
@@ -38,13 +38,12 @@ public class resourcesRecyclerViewAdaper extends RecyclerView.Adapter<resourcesR
 
         resourcesActivityPhoto photoItem = mPhotosList.get(position);
         Log.d(TAG, "onBindViewHolder: " + photoItem.getTitle() + "-->" + position);
-        Picasso.with(mContext).load(photoItem.getImage())
-                .error(R.drawable.placeholder)
-                .placeholder(R.drawable.placeholder)
+        Picasso.get().load(photoItem.getImage())
+                .error(R.mipmap.ic_launcher)
+                .placeholder(R.mipmap.ic_launcher)
                 .into(holder.resourceThumbnail);
 
-
-
+        holder.resourceTitle.setText(photoItem.getTitle());
     }
 
     @Override

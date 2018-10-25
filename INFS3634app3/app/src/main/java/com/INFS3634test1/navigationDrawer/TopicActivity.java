@@ -1,15 +1,13 @@
 package com.INFS3634test1.navigationDrawer;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ListView;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.AdapterView;
+        import android.widget.AdapterView.OnItemClickListener;
+        import android.widget.ListView;
 
-import com.INFS3634test1.R;
-
-
+        import com.INFS3634test1.R;
 
 
 public class TopicActivity extends NavigationDrawerBaseActivity {
@@ -81,9 +79,9 @@ public class TopicActivity extends NavigationDrawerBaseActivity {
                         "The activity is completely obscured by another activity (the activity is now in the \"background\"). A stopped activity is also still alive (the Activity object is retained in memory, it maintains all state and member information, but is not attached to the window manager). However, it is no longer visible to the user and it can be killed by the system when memory is needed elsewhere.\n" +
                         "\n" +
                         "If an activity is paused or stopped, the system can drop it from memory either by asking it to finish (calling its finish() method), or simply killing its process. When the activity is opened again (after being finished or killed), it must be created all over again." +
-                // Topic 4
-                "When an activity transitions into and out of the different states described previously, it is notified through various callback methods. All of the callback methods are hooks that you can override to do appropriate work when the state of your activity changes. \n",
-                        "\n" +
+                        // Topic 4
+                        "When an activity transitions into and out of the different states described previously, it is notified through various callback methods. All of the callback methods are hooks that you can override to do appropriate work when the state of your activity changes. \n",
+                "\n" +
                         "A summary of the activity lifecycle’s callback methods is provided below:\n" +
                         "\n" +
                         "onCreate() - Called when the activity is first created. This is where you should do all of your normal static set up - create views, bind data to lists, and so on. This method is passed a Bundle object ocntaining the activitiy’s previous state, if that state was captured. \n" +
@@ -147,10 +145,22 @@ public class TopicActivity extends NavigationDrawerBaseActivity {
                 "Insert Summary",
         };
 
+        final String[] youtubeVideoId = {
+                "gnIaNU9jI-g",
+                "odqACn2Vgic",
+                "ecZEMtpw-Gs",
+                "jxoG_Y6dvU8",
+                "Qs-lGmaMIDk",
+                "F7S5QPOEQ3E",
+                "ubTyED3ZJVg",
+                "MvIlVsXxXmY&t",
+
+
+        };
+
         topicAdapter newTopicAdapter = new topicAdapter(this, topicHeadingLevelOneArray, topicHeadingLevelTwoArray, topicContent);
         listView = (ListView) findViewById(R.id.lv_main);
         listView.setAdapter(newTopicAdapter);
-
 
 
         listView.setOnItemClickListener(new OnItemClickListener() {
@@ -160,26 +170,14 @@ public class TopicActivity extends NavigationDrawerBaseActivity {
                 Intent intent = new Intent(TopicActivity.this, topicDetail.class);
                 String message = topicHeadingLevelOneArray[position];
                 String message2 = topicContent[position];
+                String message3 = youtubeVideoId[position];
                 intent.putExtra("topic", message);
                 intent.putExtra("content", message2);
+                intent.putExtra("videoid", message3);
                 startActivity(intent);
 
             }
         });
 
     }
-
-
-
-
-
-//        WebView view = new WebView(this);         //Creates a webview to display the local html file.
-//        view.getSettings().setJavaScriptEnabled(true);   //Currently having issues where it creates a new page, not within navigation.
-//        view.setWebViewClient(new WebViewClient() {
-//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-//                view.loadUrl(url);
-//                return true;
-//            }});
-//        view.loadUrl("file:///android_asset/Topiccontent.html");
-//        setContentView(view);
-    }
+}

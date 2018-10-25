@@ -34,7 +34,7 @@ import java.util.List;
         RecyclerView playlist;
         RecyclerView.Adapter adapter;
         String API_KEY = "AIzaSyCKpiQ1Il2s-AgIe3441uiHA_xPMJP6wjU";
-        String PLAYLIST_ID = "PLRqstEMoLSjfOyLpBU_c0bSZXn8rQkI97";
+        String PLAYLIST_ID = "PLRqstEMoLSjeepVkOUgUgG3A9jyPJl2wV";
 
 
         @Override
