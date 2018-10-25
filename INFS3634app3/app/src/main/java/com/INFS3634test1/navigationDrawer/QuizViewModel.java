@@ -7,11 +7,6 @@ import android.util.Log;
 
 import java.util.List;
 
-/**
- * View Model to keep a reference to the word repository and
- * an up-to-date list of all words.
- */
-
 public class QuizViewModel extends AndroidViewModel {
 
     private QuizRepository mRepository;
