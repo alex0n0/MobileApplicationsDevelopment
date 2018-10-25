@@ -22,12 +22,35 @@ public class resourcesRecyclerItemOnClickListener extends RecyclerView.SimpleOnI
     public resourcesRecyclerItemOnClickListener(Context context, final RecyclerView recyclerView, onRecyclerClickerListener listener) {
         mListener = listener;
         mGestureDetectorCompat = new GestureDetectorCompat(context, new GestureDetector.SimpleOnGestureListener() {
+
             @Override
             public boolean onSingleTapUp(MotionEvent e) {
                 Log.d(TAG, "onSingleTapUp: starts");
                 View childView = recyclerView.findChildViewUnder(e.getX(), e.getY());
                 if(childView != null && mListener != null){
                     Log.d(TAG, "onSingleTapUp: calling listener.onItemClick");
+                    mListener.onItemLongClick(childView, recyclerView.getChildAdapterPosition(childView));
+                }
+                return true;
+            }
+
+            @Override
+            public boolean onDoubleTap(MotionEvent e) {
+                Log.d(TAG, "onDoubleTap: starts");
+                View childView = recyclerView.findChildViewUnder(e.getX(), e.getY());
+                if(childView != null && mListener != null){
+                    Log.d(TAG, "onDoubleTap: calling listener.onItemClick");
+                    mListener.onItemLongClick(childView, recyclerView.getChildAdapterPosition(childView));
+                }
+                return true;
+            }
+
+            @Override
+            public boolean onDoubleTapEvent(MotionEvent e) {
+                Log.d(TAG, "onDoubleTapEvent starts");
+                View childView = recyclerView.findChildViewUnder(e.getX(), e.getY());
+                if(childView != null && mListener != null){
+                    Log.d(TAG, "onDoubleTapEvent calling listener.onItemClick");
                     mListener.onItemClick(childView, recyclerView.getChildAdapterPosition(childView));
                 }
                 return true;
@@ -48,13 +71,14 @@ public class resourcesRecyclerItemOnClickListener extends RecyclerView.SimpleOnI
     @Override
     public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
         Log.d(TAG, "onInterceptTouchEvent: starts");
-        if(mGestureDetectorCompat != null) {
+       // return super.onInterceptTouchEvent(rv, e);
+       if(mGestureDetectorCompat != null) {
             boolean result = mGestureDetectorCompat.onTouchEvent(e);
             Log.d(TAG, "onInterceptTouchEvent(): returned: " + result);
+            return result;
         } else {
             Log.d(TAG, "onInterceptTouchEvent: returned: false");
             return false;
         }
-        return true;
     }
 }

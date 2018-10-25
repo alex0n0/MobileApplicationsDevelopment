@@ -2,7 +2,6 @@ package com.INFS3634test1.navigationDrawer;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -20,7 +19,7 @@ public class ResourcesActivity extends NavigationDrawerBaseActivity implements r
         resourcesRecyclerItemOnClickListener.onRecyclerClickerListener {
 
     private static final String TAG = "ResourcesActivity";
-    private resourcesRecyclerViewAdaper mResourcesRecyclerViewAdaper;
+    private resourcesRecyclerViewAdapter mResourcesRecyclerViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +33,11 @@ public class ResourcesActivity extends NavigationDrawerBaseActivity implements r
 
         recyclerView.addOnItemTouchListener(new resourcesRecyclerItemOnClickListener(this, recyclerView, this));
 
-        mResourcesRecyclerViewAdaper = new resourcesRecyclerViewAdaper(new ArrayList<resourcesActivityPhoto>(), this);
-        recyclerView.setAdapter(mResourcesRecyclerViewAdaper);
+        mResourcesRecyclerViewAdapter = new resourcesRecyclerViewAdapter(new ArrayList<resourcesActivityPhoto>(), this);
+        recyclerView.setAdapter(mResourcesRecyclerViewAdapter);
 
-       // resourcesActivityGetRawData getRawData = new resourcesActivityGetRawData(this);
-       // getRawData.execute("https://api.flickr.com/services/feeds/photos_public.gne?tags=android,nougat&format=json&nojsoncallback=1");
+        // resourcesActivityGetRawData getRawData = new resourcesActivityGetRawData(this);
+        // getRawData.execute("https://api.flickr.com/services/feeds/photos_public.gne?tags=android,nougat&format=json&nojsoncallback=1");
 
         Log.d(TAG, "onCreate: end");
     }
@@ -47,17 +46,17 @@ public class ResourcesActivity extends NavigationDrawerBaseActivity implements r
     protected void onResume() {
         Log.d(TAG, "onResume: starts");
         super.onResume();
-        resourcesActivityGetFlickrJsonData getFlickrJsonData = new resourcesActivityGetFlickrJsonData(this,"https://api.flickr.com/services/feeds/photos_public.gne?", "en-us", true);
+        resourcesActivityGetFlickrJsonData getFlickrJsonData = new resourcesActivityGetFlickrJsonData(this, "https://api.flickr.com/services/feeds/photos_public.gne?", "en-us", true);
         getFlickrJsonData.execute("android, nougat");
         Log.d(TAG, "onResume: ends");
     }
 
 
     @Override
-    public void onDataAvailable(List<resourcesActivityPhoto> data, DownloadedStatus status){
+    public void onDataAvailable(List<resourcesActivityPhoto> data, DownloadedStatus status) {
         Log.d(TAG, "onDataAvailable: start");
-        if(status == DownloadedStatus.OK){
-            mResourcesRecyclerViewAdaper.loadNewData(data);
+        if (status == DownloadedStatus.OK) {
+            mResourcesRecyclerViewAdapter.loadNewData(data);
         } else {
             // download or processing failed
             Log.e(TAG, "onDataAvailable: failed with status " + status);
@@ -75,8 +74,8 @@ public class ResourcesActivity extends NavigationDrawerBaseActivity implements r
     public void onItemLongClick(View view, int position) {
         Log.d(TAG, "onItemLongClick: starts");
 //        Toast.makeText(ResourcesActivity.this, "Long tap at position " + position, Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, resourcesActivityPhoto.class);
-        intent.putExtra(PHOTO_TRANSFER, mResourcesRecyclerViewAdaper.getPhoto(position));
+        Intent intent = new Intent(this, resourcesPhotoDetailActivity.class);
+        intent.putExtra(PHOTO_TRANSFER, mResourcesRecyclerViewAdapter.getPhoto(position));
         startActivity(intent);
 
     }

@@ -34,6 +34,9 @@
             android:name=".navigationDrawer.ResourcesActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".navigationDrawer.resourcesPhotoDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".navigationDrawer.QuizSelectionActivity"
             android:label="@string/title_activity_quiz_test"
             android:theme="@style/AppTheme.NoActionBar" />

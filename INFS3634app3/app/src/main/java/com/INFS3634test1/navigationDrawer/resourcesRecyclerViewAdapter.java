@@ -14,12 +14,12 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class resourcesRecyclerViewAdaper extends RecyclerView.Adapter<resourcesRecyclerViewAdaper.FlickrImageViewHolder> {
+public class resourcesRecyclerViewAdapter extends RecyclerView.Adapter<resourcesRecyclerViewAdapter.FlickrImageViewHolder> {
     private static final String TAG = "resourcesRecyclerViewAd";
     private List<resourcesActivityPhoto> mPhotosList;
     private Context mContext;
 
-    public resourcesRecyclerViewAdaper(List<resourcesActivityPhoto> photosList, Context context) {
+    public resourcesRecyclerViewAdapter(List<resourcesActivityPhoto> photosList, Context context) {
         mPhotosList = photosList;
         mContext = context;
     }
