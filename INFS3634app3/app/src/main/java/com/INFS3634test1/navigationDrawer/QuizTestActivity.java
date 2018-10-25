@@ -69,7 +69,7 @@ public class QuizTestActivity extends NavigationDrawerBaseActivity {
                 int[][] answerCheckArray = QuizTestAdapter.checkArray;
 
                 int correctCount = 0;
-                int questionCount = 0;
+                int questionCount = answerCheckArray.length;
 
                 boolean[] correctArray = new boolean[answerCheckArray.length];
                 for (int i = 0; i < correctArray.length; i++) {
@@ -116,9 +116,9 @@ public class QuizTestActivity extends NavigationDrawerBaseActivity {
                         default:
                             s += " should not appear";
                     }
-                    if (answerCheckArray[i][1] != -1) {
-                        questionCount++;
-                    }
+//                    if (answerCheckArray[i][1] != -1) {
+//                        questionCount++;
+//                    }
                     if (answerCheckArray[i][0] == answerCheckArray[i][1]) {
                         correctCount++;
                         correctArray[i] = true;
