@@ -1,6 +1,7 @@
 package com.INFS3634test1.navigationDrawer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -24,8 +25,39 @@ import java.net.URL;
 
 
 public class SearchActivity extends NavigationDrawerBaseActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.search_activity);
+        appBarTxt.setText("Contact Us");
 
-    private EditText userInput;
+        Button buttonBack = findViewById(R.id.searchActivityBack);
+Button buttonEmail = findViewById(R.id.searchEmailButton);
+
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonEmail.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/html");
+                intent.putExtra(Intent.EXTRA_EMAIL, "emailaddress@emailaddress.com");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+                intent.putExtra(Intent.EXTRA_TEXT, "I'm email body.");
+
+                startActivity(Intent.createChooser(intent, "Send Email"));
+            }
+        });
+    }
+}
+    // Broken Custom Search feature :'(
+    /** private EditText userInput;
     private Button button;
     // private RecyclerView recyclerView;
     private ProgressBar progressBar;
@@ -193,3 +225,4 @@ public class SearchActivity extends NavigationDrawerBaseActivity {
         }
     }
 }
+**/
