@@ -11,12 +11,14 @@ import android.widget.Button;
 import android.view.View;
 import android.content.Intent;
 
-public class QuizSelectionActivity extends AppCompatActivity {
+public class QuizSelectionActivity extends NavigationDrawerBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_selection);
+
+        appBarTxt.setText("Module Quiz");
 
 //        Button button_select_all = (Button) findViewById(R.id.button_select_all);
 //        Button button_select_1 = (Button) findViewById(R.id.button_select_1);
@@ -24,12 +26,14 @@ public class QuizSelectionActivity extends AppCompatActivity {
 //        Button button_select_3 = (Button) findViewById(R.id.button_select_3);
 //        Button button_select_4 = (Button) findViewById(R.id.button_select_4);
     }
+
     public void toQuizAll(View view) {
         int i = -1;
         Intent intent = new Intent(this, QuizTestActivity.class);
         intent.putExtra("TOPIC_TEST", i);
         startActivity(intent);
     }
+
     public void toQuiz1(View view) {
         int i = 1;
         Intent intent = new Intent(this, QuizTestActivity.class);

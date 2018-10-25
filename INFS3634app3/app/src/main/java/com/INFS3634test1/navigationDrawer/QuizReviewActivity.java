@@ -25,7 +25,7 @@ import android.widget.Toast;
 import java.util.List;
 
 
-public class QuizReviewActivity extends AppCompatActivity {
+public class QuizReviewActivity extends NavigationDrawerBaseActivity {
 
     private QuizViewModel mQuizViewModel;
 
@@ -33,6 +33,8 @@ public class QuizReviewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_review);
+
+        appBarTxt.setText("Module Quiz");
 
         Intent intent = getIntent();
         int topic = intent.getIntExtra("TOPIC_REVIEW", -1);

@@ -26,7 +26,7 @@ import android.widget.Toast;
 import java.util.List;
 
 
-public class QuizTestActivity extends AppCompatActivity {
+public class QuizTestActivity extends NavigationDrawerBaseActivity {
 
     private QuizViewModel mQuizViewModel;
 
@@ -35,8 +35,10 @@ public class QuizTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_test);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        appBarTxt.setText("Module Quiz");
+
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
         final int topic = intent.getIntExtra("TOPIC_TEST", -1);
