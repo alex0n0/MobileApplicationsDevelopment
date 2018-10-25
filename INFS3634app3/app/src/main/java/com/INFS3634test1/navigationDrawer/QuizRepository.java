@@ -16,6 +16,7 @@ class QuizRepository {
     private QuizDao mQuizDao2;
     private QuizDao mQuizDao3;
     private QuizDao mQuizDao4;
+
     private LiveData<List<Quiz>> mAllQuiz;
 
     private LiveData<List<Quiz>> mQuizTopic1;
@@ -23,10 +24,8 @@ class QuizRepository {
     private LiveData<List<Quiz>> mQuizTopic3;
     private LiveData<List<Quiz>> mQuizTopic4;
 
-    // Note that in order to unit test the WordRepository, you have to remove the Application
-    // dependency. This adds complexity and much more code, and this sample is not about testing.
-    // See the BasicSample in the android-architecture-components repository at
-    // https://github.com/googlesamples
+
+
     QuizRepository(Application application) {
         QuizRoomDatabase db = QuizRoomDatabase.getDatabase(application);
         mQuizDao = db.quizDao();
@@ -44,11 +43,11 @@ class QuizRepository {
 
 
 
-    // Room executes all queries on a separate thread.
-    // Observed LiveData will notify the observer when the data has changed.
-    LiveData<List<Quiz>> getAllQuiz() {
-        return mAllQuiz;
-    }
+
+
+//    LiveData<List<Quiz>> getAllQuiz() {
+//        return mAllQuiz;
+//    }
     LiveData<List<Quiz>> getTopic1Quiz() {
         return mQuizTopic1;
     }
@@ -62,9 +61,8 @@ class QuizRepository {
         return mQuizTopic4;
     }
 
-    // You must call this on a non-UI thread or your app will crash.
-    // Like this, Room ensures that you're not doing any long running operations on the main
-    // thread, blocking the UI.
+
+
     void insert(Quiz quiz) {
         new insertAsyncTask(mQuizDao).execute(quiz);
     }

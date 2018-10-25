@@ -1,19 +1,14 @@
 package com.INFS3634test1.navigationDrawer;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-import com.INFS3634test1.R;
-
-
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.widget.TextView;
 import android.view.View;
 import android.util.Log;
 
-public class QuizResultsActivity extends AppCompatActivity {
+import com.INFS3634test1.R;
+
+public class QuizResultsActivity extends NavigationDrawerBaseActivity {
 
     int topic;
     boolean[] mCorrectArray;
@@ -22,6 +17,8 @@ public class QuizResultsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_results);
+
+        appBarTxt.setText("Module Quiz");
 
         Intent intent = getIntent();
         int count = intent.getIntExtra("KEYCORRECT", 0);

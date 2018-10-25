@@ -9,17 +9,11 @@ import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-/**
- * This is the backend. The database. This used to be done by the OpenHelper.
- * The fact that this has very few comments emphasizes its coolness.
- */
-
 @Database(entities = {Quiz.class}, version = 4)
 public abstract class QuizRoomDatabase extends RoomDatabase {
 
     public abstract QuizDao quizDao();
 
-    // marking the instance as volatile to ensure atomic access to the variable
     private static volatile QuizRoomDatabase INSTANCE;
 
     static QuizRoomDatabase getDatabase(final Context context) {
@@ -28,8 +22,6 @@ public abstract class QuizRoomDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             QuizRoomDatabase.class, "quiz_database")
-                            // Wipes and rebuilds instead of migrating if no Migration object.
-                            // Migration is not part of this codelab.
                             .fallbackToDestructiveMigration()
                             .addCallback(sRoomDatabaseCallback)
                             .build();
@@ -39,13 +31,6 @@ public abstract class QuizRoomDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
-    /**
-     * Override the onOpen method to populate the database.
-     * For this sample, we clear the database every time it is created or opened.
-     *
-     * If you want to populate the database only when the database is created for the 1st time,
-     * override RoomDatabase.Callback()#onCreate
-     */
     private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
 
         @Override
@@ -57,10 +42,6 @@ public abstract class QuizRoomDatabase extends RoomDatabase {
         }
     };
 
-    /**
-     * Populate the database in the background.
-     * If you want to start with more words, just add them.
-     */
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
 
         private final QuizDao mDao;
@@ -141,6 +122,12 @@ public abstract class QuizRoomDatabase extends RoomDatabase {
             quiz = new Quiz(29, 4, true, false, 4,"question 4", "random option 1", "random option 2", "random option 3", "random option 4", "something");
             mDao.insert(quiz);
             quiz = new Quiz(30, 4, true, false, 3,"question 5", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+            mDao.insert(quiz);
+
+
+
+
+            quiz = new Quiz(0, 99, true, false, 1,"question 1", "random option 1", "random option 2", "random option 3", "random option 4", "something");
             mDao.insert(quiz);
 
             return null;

@@ -48,16 +48,6 @@ public class QuizTestAdapter extends RecyclerView.Adapter<QuizTestAdapter.QuizVi
     QuizTestAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
         mContext = context;
-        checkArray = new int[10][2];
-        for(int i = 0; i < checkArray.length; i++) {
-            for (int j = 0; j < checkArray[i].length; j++) {
-                if (j == 0) {
-                    checkArray[i][j] = 0;
-                } else {
-                    checkArray[i][j] = -1;
-                }
-            }
-        }
     }
 
     @Override
@@ -74,7 +64,9 @@ public class QuizTestAdapter extends RecyclerView.Adapter<QuizTestAdapter.QuizVi
 
 
         boolean isMcq = current.getIsMcq();
-        holder.tv_test_question.setText(current.toString());
+        String s = "";
+        s = "Question " + (position + 1) + "\n" + current.toString();
+        holder.tv_test_question.setText(s);
         holder.rb_test_a.setText(current.getOption1());
         holder.rb_test_b.setText(current.getOption2());
 
@@ -126,6 +118,16 @@ public class QuizTestAdapter extends RecyclerView.Adapter<QuizTestAdapter.QuizVi
 
     void setQuiz(List<Quiz> quiz) {
         mQuiz = quiz;
+        checkArray = new int[quiz.size()][2];
+        for(int i = 0; i < checkArray.length; i++) {
+            for (int j = 0; j < checkArray[i].length; j++) {
+                if (j == 0) {
+                    checkArray[i][j] = 0;
+                } else {
+                    checkArray[i][j] = -1;
+                }
+            }
+        }
         notifyDataSetChanged();
     }
 
