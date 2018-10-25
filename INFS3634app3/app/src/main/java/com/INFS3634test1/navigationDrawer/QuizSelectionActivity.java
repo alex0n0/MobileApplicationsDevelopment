@@ -29,13 +29,11 @@ public class QuizSelectionActivity extends NavigationDrawerBaseActivity {
                 "Topic 6: Saving an Activities State",
                 "Topic 7: Methods and Bundle",
                 "Topic 8: Activities in tasks and the back stack",
-                "Topic 9: Summary",
         };
 
         final String[] topicHeadingLevelTwoArray = {
                 "INFS3634: Lecture 2",
                 "INFS3634: Lecture 2",
-                "INFS3634: Lecture 3",
                 "INFS3634: Lecture 3",
                 "INFS3634: Lecture 3",
                 "INFS3634: Lecture 3",

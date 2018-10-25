@@ -12,10 +12,10 @@ import java.util.List;
 class QuizRepository {
 
     private QuizDao mQuizDao;
-    private QuizDao mQuizDao1;
-    private QuizDao mQuizDao2;
-    private QuizDao mQuizDao3;
-    private QuizDao mQuizDao4;
+//    private QuizDao mQuizDao1;
+//    private QuizDao mQuizDao2;
+//    private QuizDao mQuizDao3;
+//    private QuizDao mQuizDao4;
 
     private LiveData<List<Quiz>> mAllQuiz;
 
@@ -23,22 +23,30 @@ class QuizRepository {
     private LiveData<List<Quiz>> mQuizTopic2;
     private LiveData<List<Quiz>> mQuizTopic3;
     private LiveData<List<Quiz>> mQuizTopic4;
+    private LiveData<List<Quiz>> mQuizTopic5;
+    private LiveData<List<Quiz>> mQuizTopic6;
+    private LiveData<List<Quiz>> mQuizTopic7;
+    private LiveData<List<Quiz>> mQuizTopic8;
 
 
 
     QuizRepository(Application application) {
         QuizRoomDatabase db = QuizRoomDatabase.getDatabase(application);
         mQuizDao = db.quizDao();
-        mQuizDao1 = db.quizDao();
-        mQuizDao2 = db.quizDao();
-        mQuizDao3 = db.quizDao();
-        mQuizDao4 = db.quizDao();
+//        mQuizDao1 = db.quizDao();
+//        mQuizDao2 = db.quizDao();
+//        mQuizDao3 = db.quizDao();
+//        mQuizDao4 = db.quizDao();
 
-        mAllQuiz = mQuizDao.getTopicAll();
-        mQuizTopic1 = mQuizDao1.getTopic1();
-        mQuizTopic2 = mQuizDao2.getTopic2();
-        mQuizTopic3 = mQuizDao3.getTopic3();
-        mQuizTopic4 = mQuizDao4.getTopic4();
+//        mAllQuiz = mQuizDao.getTopicAll();
+        mQuizTopic1 = mQuizDao.getTopic1();
+        mQuizTopic2 = mQuizDao.getTopic2();
+        mQuizTopic3 = mQuizDao.getTopic3();
+        mQuizTopic4 = mQuizDao.getTopic4();
+        mQuizTopic5 = mQuizDao.getTopic5();
+        mQuizTopic6 = mQuizDao.getTopic6();
+        mQuizTopic7 = mQuizDao.getTopic7();
+        mQuizTopic8 = mQuizDao.getTopic8();
     }
 
 
@@ -59,6 +67,18 @@ class QuizRepository {
     }
     LiveData<List<Quiz>> getTopic4Quiz() {
         return mQuizTopic4;
+    }
+    LiveData<List<Quiz>> getTopic5Quiz() {
+        return mQuizTopic5;
+    }
+    LiveData<List<Quiz>> getTopic6Quiz() {
+        return mQuizTopic6;
+    }
+    LiveData<List<Quiz>> getTopic7Quiz() {
+        return mQuizTopic7;
+    }
+    LiveData<List<Quiz>> getTopic8Quiz() {
+        return mQuizTopic8;
     }
 
 

@@ -2,6 +2,7 @@ package com.INFS3634test1.navigationDrawer;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.util.Log;
 import android.view.View;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -128,6 +129,13 @@ public class QuizTestActivity extends NavigationDrawerBaseActivity {
             }
         });
 
+    }
+    @Override public void onBackPressed() {
+//        if (drawer.isDrawerOpen(GravityCompat.START))
+//            drawer.closeDrawer(GravityCompat.START);
+        startActivity(new Intent(QuizTestActivity.this, QuizSelectionActivity.class));
+        finish();
+        Log.i(TAG_N, "Back button pressed.");
     }
 }
 
