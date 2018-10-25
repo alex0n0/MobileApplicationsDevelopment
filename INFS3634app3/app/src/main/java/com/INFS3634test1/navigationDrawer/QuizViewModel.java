@@ -15,11 +15,7 @@ import java.util.List;
 public class QuizViewModel extends AndroidViewModel {
 
     private QuizRepository mRepository;
-    // Using LiveData and caching what getAlphabetizedWords returns has several benefits:
-    // - We can put an observer on the data (instead of polling for changes) and only update the
-    //   the UI when the data actually changes.
-    // - Repository is completely separated from the UI through the ViewModel.
-    private LiveData<List<Quiz>> mAllQuiz;
+//    private LiveData<List<Quiz>> mAllQuiz;
     private LiveData<List<Quiz>> mTopic1Quiz;
     private LiveData<List<Quiz>> mTopic2Quiz;
     private LiveData<List<Quiz>> mTopic3Quiz;
@@ -28,7 +24,7 @@ public class QuizViewModel extends AndroidViewModel {
     public QuizViewModel(Application application) {
         super(application);
         mRepository = new QuizRepository(application);
-        mAllQuiz = mRepository.getAllQuiz();
+//        mAllQuiz = mRepository.getAllQuiz();
         mTopic1Quiz = mRepository.getTopic1Quiz();
         mTopic2Quiz = mRepository.getTopic2Quiz();
         mTopic3Quiz = mRepository.getTopic3Quiz();

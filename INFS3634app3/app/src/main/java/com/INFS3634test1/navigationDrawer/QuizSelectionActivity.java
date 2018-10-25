@@ -1,15 +1,11 @@
 package com.INFS3634test1.navigationDrawer;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import com.INFS3634test1.R;
-
-
 import android.util.Log;
-import android.widget.Button;
 import android.view.View;
 import android.content.Intent;
+
+import com.INFS3634test1.R;
 
 public class QuizSelectionActivity extends NavigationDrawerBaseActivity {
 
@@ -20,11 +16,6 @@ public class QuizSelectionActivity extends NavigationDrawerBaseActivity {
 
         appBarTxt.setText("Module Quiz");
 
-//        Button button_select_all = (Button) findViewById(R.id.button_select_all);
-//        Button button_select_1 = (Button) findViewById(R.id.button_select_1);
-//        Button button_select_2 = (Button) findViewById(R.id.button_select_2);
-//        Button button_select_3 = (Button) findViewById(R.id.button_select_3);
-//        Button button_select_4 = (Button) findViewById(R.id.button_select_4);
     }
 
     public void toQuizAll(View view) {

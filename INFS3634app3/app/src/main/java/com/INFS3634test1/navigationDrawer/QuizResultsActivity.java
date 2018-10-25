@@ -1,17 +1,12 @@
 package com.INFS3634test1.navigationDrawer;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-import com.INFS3634test1.R;
-
-
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.widget.TextView;
 import android.view.View;
 import android.util.Log;
+
+import com.INFS3634test1.R;
 
 public class QuizResultsActivity extends NavigationDrawerBaseActivity {
 
