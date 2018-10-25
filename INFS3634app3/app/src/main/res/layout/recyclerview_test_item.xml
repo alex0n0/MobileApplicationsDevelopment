@@ -8,7 +8,12 @@
         android:id="@+id/tv_test_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_light"
+        android:layout_marginBottom="8dp"
+        android:background="@color/quiz_question_row"
+        android:paddingBottom="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
         tools:text="asdf" />
 
     <RadioGroup
@@ -18,32 +23,41 @@
 
         <RadioButton
             android:id="@+id/rb_test_a"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:checked="false"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/rb_test_b"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:checked="false"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/rb_test_c"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:checked="false"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/rb_test_d"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:checked="false"
             android:text="RadioButton" />

@@ -9,25 +9,40 @@
         android:id="@+id/tv_review_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_light"
+        android:layout_marginBottom="8dp"
+        android:background="@color/quiz_question_row"
+        android:paddingBottom="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
         tools:text="asdf" />
 
     <TextView
         android:id="@+id/tv_review_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="center"
         tools:text="asdf" />
 
     <TextView
         android:id="@+id/tv_review_answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         tools:text="asdf" />
 
     <TextView
         android:id="@+id/tv_review_explanation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         tools:text="asdf" />
 
 </LinearLayout>
