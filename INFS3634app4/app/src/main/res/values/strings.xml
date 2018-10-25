@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Activity Lifecycle App</string>
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_topic">Topic Content</string>
+    <string name="nav_videos">Learning Videos</string>
+    <string name="nav_quiz">MCQ Quiz</string>
+    <string name="nav_search">Search Engine</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Topic</item>
+        <item>Video</item>
+        <item>Quiz</item>
+        <item>Search</item>
+    </string-array>
+    <string name="open_drawer">open_drawer</string>
+    <string name="close_drawer">close_drawer</string>
+    <string name="title_activity_quiz_test">QuizTestActivity</string>
+    <string name="title_activity_quiz_review">QuizReviewActivity</string>
+    <string name="title_activity_resources_searchactivity">resources_searchactivity</string>
+    <string name="title_activity_resources_activitysearch">resources_activitysearch</string>
+
+</resources>
