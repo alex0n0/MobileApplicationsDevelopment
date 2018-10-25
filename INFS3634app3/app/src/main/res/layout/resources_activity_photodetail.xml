@@ -33,7 +33,7 @@
                 <ImageView
                     android:id="@+id/photoImage"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="392dp"
                     android:layout_margin="8dp"
                     android:layout_marginBottom="16dp"
                     android:scaleType="fitCenter"
@@ -44,6 +44,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    android:textStyle="bold"
                     tools:text="photoTitle" />
 
                 <TextView
@@ -51,6 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    android:textStyle="italic"
                     tools:text="photoTag" />
 
             </LinearLayout>

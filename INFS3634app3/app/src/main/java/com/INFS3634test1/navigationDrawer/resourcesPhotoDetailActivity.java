@@ -27,10 +27,10 @@ public class resourcesPhotoDetailActivity extends AppCompatActivity {
             photoTitle.setText("Title: " + photo.getTitle());
 
             TextView photoAuthor = (TextView) findViewById(R.id.photoAuthor);
-            photoTitle.setText("Author: " + photo.getAuthor());
+            photoAuthor.setText("Author: " + photo.getAuthor());
 
             TextView photoTag = (TextView) findViewById(R.id.photoTag);
-            photoTitle.setText("Title: " + photo.getTags());
+            photoTag.setText("Tags: " + photo.getTags());
 
             ImageView photoImage = (ImageView) findViewById(R.id.photoImage);
             Picasso.get().load(photo.getLink())

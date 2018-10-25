@@ -32,6 +32,7 @@ public class resourcesActivityGetFlickrJsonData extends AsyncTask<String, Void, 
         mLanguage = language;
         mMatchAll = matchAll;
         mCallBack = callBack;
+
     }
 
     @Override

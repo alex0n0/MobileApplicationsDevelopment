@@ -47,7 +47,7 @@ public class ResourcesActivity extends NavigationDrawerBaseActivity implements r
         Log.d(TAG, "onResume: starts");
         super.onResume();
         resourcesActivityGetFlickrJsonData getFlickrJsonData = new resourcesActivityGetFlickrJsonData(this, "https://api.flickr.com/services/feeds/photos_public.gne?", "en-us", true);
-        getFlickrJsonData.execute("android, nougat");
+        getFlickrJsonData.execute("INFS3634JasonGabrielAlex, android");
         Log.d(TAG, "onResume: ends");
     }
 
