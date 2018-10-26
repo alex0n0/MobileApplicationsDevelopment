@@ -9,7 +9,7 @@
     android:weightSum="2"
     android:orientation="vertical"
     tools:context="com.example.android.youtubetester2.MainActivity"
-    android:background="@color/primary_light">
+    android:background="@color/myPrimaryBase">
 
     <fragment
         android:id="@+id/VideoFragment"
