@@ -32,6 +32,7 @@ public class NavigationDrawerBaseActivity extends AppCompatActivity {
     private ImageView imgLeftToolbar;
     private boolean isOpenOrClose = false;
     private ActionBarDrawerToggle drawerToggle;
+    static final String PHOTO_TRANSFER = "PHOTO_TRANSFER";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

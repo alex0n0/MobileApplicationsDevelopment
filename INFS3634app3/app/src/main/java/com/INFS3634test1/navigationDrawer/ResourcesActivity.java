@@ -13,7 +13,7 @@ import com.INFS3634test1.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.INFS3634test1.navigationDrawer.resourceBaseActivity.PHOTO_TRANSFER;
+import static com.INFS3634test1.navigationDrawer.NavigationDrawerBaseActivity.PHOTO_TRANSFER;
 
 public class ResourcesActivity extends NavigationDrawerBaseActivity implements resourcesActivityGetFlickrJsonData.OnDataAvailable,
         resourcesRecyclerItemOnClickListener.onRecyclerClickerListener {

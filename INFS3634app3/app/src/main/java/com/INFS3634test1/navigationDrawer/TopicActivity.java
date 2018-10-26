@@ -1,18 +1,20 @@
 package com.INFS3634test1.navigationDrawer;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.AdapterView;
-        import android.widget.AdapterView.OnItemClickListener;
-        import android.widget.ListView;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
 
-        import com.INFS3634test1.R;
+import com.INFS3634test1.R;
 
 
 public class TopicActivity extends NavigationDrawerBaseActivity {
 
     ListView listView;
+    private static final String TAG = "TopicActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,7 @@ public class TopicActivity extends NavigationDrawerBaseActivity {
         setContentView(R.layout.topic_activity);
         appBarTxt.setText("Module Topics");
 
+        Log.d(TAG, "onCreate: starts");
 
         final String[] topicHeadingLevelOneArray = {
                 "Topic 1: What are Activities?",
@@ -142,7 +145,32 @@ public class TopicActivity extends NavigationDrawerBaseActivity {
                         "\n" +
                         "If the user continues to press Back, then each activity in the stack is popped off to reveal the previous one, until the user returns to the Home screen (or to whichever activity was running when the task began). When all activities are removed from the stack, the task no longer exists.\n",
                 // Topic 9
-                "Insert Summary",
+                "\t1. An Activity is one of the distinguishing features of the Android Framework.\n" +
+                        "\n" +
+                        "\t2. The Activity Lifecycle consists of the following callback methods\n" +
+                        "\t\ta. onCreate()\n" +
+                        "\t\tb. onRestart()\n" +
+                        "\t\tc. onStart()\n" +
+                        "\t\td. onResume()\n" +
+                        "\t\te. onPause()\n" +
+                        "\t\tf. onStop()\n" +
+                        "\t\tg. onDestroy()\n" +
+                        "\n" +
+                        "\t3. The entire lifetime of an activity happens between the call to onCreate() and the call to onDestroy().\n" +
+                        "\n" +
+                        "\t4. The visible lifetime of an activity happens between the call to onStart() and the call to onStop().\n" +
+                        "\n" +
+                        "\t5. The foreground lifetime of an activity happens between the call to onResume() and the call to onPause().\n" +
+                        "\n" +
+                        "\t6. An Activity can be in the following three states - resume, paused or stopped.\n" +
+                        "\n" +
+                        "\t7. When an activity is paused or stopped, the state of the activity is retained. This is true because the Activity object is still held in memory when it is paused or stopped – all information about its members and current state is still alive.\n" +
+                        "\n" +
+                        "\t8. The system calls onSaveInstanceState() before making the activity vulnerable to destruction.The system passes this method a Bundle in which you can save state information about the activity as name-value pairs, using methods such as putString() and putInt(). \n" +
+                        "\n" +
+                        "\t9. A task is a collection of activities that users interact with when performing a certain job. The activities are arranged in a stack (the back stack), in the order in which each activity is opened. " +
+                        "Activities in the stack are never rearranged, only pushed and popped from the stack—pushed onto the stack when started by the current activity and popped off when the user leaves it using the Back button.",
+
         };
 
         final String[] youtubeVideoId = {
@@ -153,7 +181,8 @@ public class TopicActivity extends NavigationDrawerBaseActivity {
                 "Qs-lGmaMIDk",
                 "F7S5QPOEQ3E",
                 "ubTyED3ZJVg",
-                "MvIlVsXxXmY&t",
+                "m8sf0UkJkxo",
+                "-G91Hp3t6sg&t",
 
         };
 
@@ -177,6 +206,7 @@ public class TopicActivity extends NavigationDrawerBaseActivity {
 
             }
         });
+        Log.d(TAG, "onCreate: ends");
 
     }
 }

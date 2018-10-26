@@ -1,6 +1,7 @@
 package com.INFS3634test1.navigationDrawer;
 
 import android.app.Activity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,18 +12,19 @@ import com.INFS3634test1.R;
 
 public class topicAdapter extends ArrayAdapter {
 
+    private static final String TAG = "topicAdapter";
+
     //to reference the Activity
     private final Activity context;
 
     //to store the list of Topic Level 1 heading
     private final String[] topicHeadingLevelOneArray;
 
-    //to store the list of countries
+    //to store the list of Topic Level 2 Headings
     private final String[] topicHeadingLevelTwoArray;
 
-    //to store the list of countries
+    //to store the list of Content for each module
     private final String[] topicContent;
-
 
 
 
@@ -45,6 +47,8 @@ public class topicAdapter extends ArrayAdapter {
         this.topicHeadingLevelOneArray = topicHeadingLevelOneArray;
         this.topicHeadingLevelTwoArray = topicHeadingLevelTwoArray;
         this.topicContent = topicContent;
+
+        Log.d(TAG, "topicAdapter: ends");
 
     }
 

@@ -11,10 +11,10 @@ import android.widget.TextView;
 import com.INFS3634test1.R;
 import com.squareup.picasso.Picasso;
 
-import static com.INFS3634test1.navigationDrawer.resourceBaseActivity.PHOTO_TRANSFER;
+import static com.INFS3634test1.navigationDrawer.NavigationDrawerBaseActivity.PHOTO_TRANSFER;
 
 
-public class resourcesPhotoDetailActivity extends AppCompatActivity {
+public class resourcesPhotoDetailActivity extends NavigationDrawerBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

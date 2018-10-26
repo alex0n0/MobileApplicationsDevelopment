@@ -45,7 +45,7 @@ public class VideoActivity extends NavigationDrawerBaseActivity implements YouTu
     protected void onCreate(Bundle savedInstanceState) { //This method links the different views to the XML files.
         super.onCreate(savedInstanceState);              //It links the adapter to display in the recycler view.
         setContentView(R.layout.video_activity);
-        Button backButton = findViewById(R.id.button6);
+       // Button backButton = findViewById(R.id.button6);
         appBarTxt.setText("Learning Videos");             //Layout managers are provisioned to control the recycler view sizing.
         thumbnailList = new ArrayList<>();              //Fragment is used to hold the player, with the API key used to access the video and thumbnail information.
         VideoId = new ArrayList<>();
@@ -64,13 +64,13 @@ public class VideoActivity extends NavigationDrawerBaseActivity implements YouTu
         playerFragment.initialize(API_KEY, this);
         Log.i(TAG_Y, "Player fragment made.");
 
-      backButton.setOnClickListener(new View.OnClickListener() {
+     /** backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(VideoActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
-        });
+        }); **/
     }
 
 
@@ -184,6 +184,14 @@ public class VideoActivity extends NavigationDrawerBaseActivity implements YouTu
             Log.i(TAG_Y, "Array list size returned.");
             return thumbnailList.size();
 
+        }
+
+        public void onBackPressed() {
+//        if (drawer.isDrawerOpen(GravityCompat.START))
+//            drawer.closeDrawer(GravityCompat.START);
+            startActivity(new Intent(VideoActivity.this, HomeActivity.class));
+            finish();
+            Log.i(TAG_N, "Back button pressed.");
         }
 
     }
