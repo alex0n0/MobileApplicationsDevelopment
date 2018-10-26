@@ -1,6 +1,8 @@
 # MobileApplicationsDevelopment
 INFS3634 App READ ME & General Guidelines
 
+Optimised for Android 5.0 (Lollipop) and above.
+Best experienced on a mobile device.
 
 Overall Features and Functions
 
@@ -27,4 +29,3 @@ General Guidelines and Justifications on App Development
 5.	The Flickr API was implemented through an array list and adapter to populate and required the use of a JSON file in order to extract data and images from a website. The array adapter and list view displayed thumbnails of JSON data that was extracted, with onClicks used to inflate the view to show the individual resources. The downloading was required to be executed within Async tasks to not “hang” the app, with the status being communicated within the activity to facilitate the downloads.
 
 6.	In order to create a great UX experience, the app was designed with a consistent colour scheme. The UI was furthered by intuitive positioning of buttons and prompts, so users would never be confused about using the app. This required minimal clutter within activities, with logical progression of activities and their functions as to not over complicate the app.
-
