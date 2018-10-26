@@ -49,8 +49,9 @@ public class QuizReviewAdapter extends RecyclerView.Adapter<QuizReviewAdapter.Qu
     @Override
     public void onBindViewHolder(QuizViewHolder holder, int position) {
         Quiz current = mQuiz.get(position);
-
-        holder.tv_review_question.setText(current.toString());
+        String s;
+        s = "Question " + (position + 1) + "\n" + current.toString();
+        holder.tv_review_question.setText(s);
         holder.tv_review_result.setText(mQuizResults[position] ? "Correct" : "Incorrect");
         String answer;
         switch (current.getAnswer()) {
