@@ -21,6 +21,7 @@ public class HomeActivity extends NavigationDrawerBaseActivity {
         Button buttonContent = findViewById(R.id.button3);
         Button buttonVideos = findViewById(R.id.button4);
         Button buttonQuiz = findViewById(R.id.button5);
+        Button buttonResources = findViewById(R.id.button8);
 
         buttonContent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,14 @@ public class HomeActivity extends NavigationDrawerBaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, QuizSelectionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonResources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, ResourcesActivity.class);
                 startActivity(intent);
             }
         });
