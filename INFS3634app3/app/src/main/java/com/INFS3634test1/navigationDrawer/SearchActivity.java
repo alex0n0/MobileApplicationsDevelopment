@@ -32,7 +32,7 @@ public class SearchActivity extends NavigationDrawerBaseActivity {
         appBarTxt.setText("Contact Us");
 
         Button buttonBack = findViewById(R.id.searchActivityBack);
-Button buttonEmail = findViewById(R.id.searchEmailButton);
+        Button buttonEmail = findViewById(R.id.searchEmailButton);
 
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
