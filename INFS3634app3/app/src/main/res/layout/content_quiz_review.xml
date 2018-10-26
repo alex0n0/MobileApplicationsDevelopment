@@ -6,13 +6,17 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.INFS3634test1.navigationDrawer.QuizReviewActivity"
-    tools:showIn="@layout/activity_quiz_review">
+    tools:showIn="@layout/activity_quiz_review"
+    >
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_review"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:listitem="@layout/recyclerview_review_item"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+/>
 
 </android.support.constraint.ConstraintLayout>

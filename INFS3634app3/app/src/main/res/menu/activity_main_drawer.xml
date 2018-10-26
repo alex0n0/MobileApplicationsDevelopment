@@ -14,16 +14,14 @@
             android:id="@+id/nav_video"
             android:icon="@drawable/videoicon"
             android:title="@string/nav_videos" />
-
-        <item
-            android:id="@+id/nav_quiz"
-            android:icon="@drawable/quizicon"
-            android:title="@string/nav_quiz" />
-
         <item
             android:id="@+id/nav_resources"
             android:icon="@drawable/searchicon"
             android:title="@string/nav_resources" />
+        <item
+            android:id="@+id/nav_quiz"
+            android:icon="@drawable/quizicon"
+            android:title="@string/nav_quiz" />
 
         <item
             android:id="@+id/nav_search"

@@ -5,12 +5,12 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/myPrimaryLight</item>
         <item name="colorPrimaryDark">@color/myPrimaryDark</item>
         <item name="colorAccent">@color/myComplimentDark</item>
         <item name="android:textColorSecondary">@color/secondary_text</item>
-        <item name="android:windowBackground">@color/primary_light</item>
-        <item name="cardBackgroundColor">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="cardBackgroundColor">@color/myPrimaryLight</item>
     </style>
 
 

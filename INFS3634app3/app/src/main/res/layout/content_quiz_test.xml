@@ -6,12 +6,15 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.INFS3634test1.navigationDrawer.QuizTestActivity"
-    tools:showIn="@layout/activity_quiz_test">
+    tools:showIn="@layout/activity_quiz_test"
+    android:background="@color/myPrimaryBase">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_test"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         tools:listitem="@layout/recyclerview_test_item"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 

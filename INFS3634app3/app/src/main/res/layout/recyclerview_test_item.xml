@@ -8,17 +8,21 @@
         android:id="@+id/tv_test_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:paddingBottom="8dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:paddingBottom="16dp"
         android:paddingEnd="8dp"
         android:paddingStart="8dp"
         android:paddingTop="8dp"
+        android:textStyle="bold"
         tools:text="asdf" />
 
     <RadioGroup
         android:id="@+id/rg_test_answers"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="2dp"
+        android:background="@color/white">
 
         <RadioButton
             android:id="@+id/rb_test_a"
@@ -54,7 +58,7 @@
             android:id="@+id/rb_test_d"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_weight="1"

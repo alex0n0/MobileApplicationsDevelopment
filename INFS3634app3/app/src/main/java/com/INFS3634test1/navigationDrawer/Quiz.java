@@ -128,7 +128,7 @@ public class Quiz {
 
     public String toString() {
         String string = getQuestion() +
-                "\n" + "                                            id: " + getId() + " | topic: " + getTopic() + " | answer: option " + getAnswer();
+                "\n\t\t\t\t\t\t\t\t\t\t(id: " + getId() + " | topic: " + getTopic() + " | answer: option " + getAnswer() + ")";
         return string;
     }
 

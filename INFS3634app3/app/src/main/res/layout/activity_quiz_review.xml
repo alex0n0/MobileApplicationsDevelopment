@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.INFS3634test1.navigationDrawer.QuizReviewActivity">
+    tools:context="com.INFS3634test1.navigationDrawer.QuizReviewActivity"
+    android:background="@color/myPrimaryBase">
 
     <include layout="@layout/content_quiz_review" />
 

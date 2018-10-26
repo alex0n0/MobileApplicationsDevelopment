@@ -3,45 +3,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+>
 
     <TextView
         android:id="@+id/tv_review_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:paddingBottom="8dp"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="16dp"
         android:paddingEnd="8dp"
         android:paddingStart="8dp"
         android:paddingTop="8dp"
-        tools:text="asdf" />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="asdf"
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/tv_review_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:paddingBottom="4dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
         android:textAlignment="center"
-        tools:text="asdf" />
+        tools:text="asdf"
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/tv_review_answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        tools:text="asdf" />
+        android:paddingBottom="4dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        tools:text="asdf"
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/tv_review_explanation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        tools:text="asdf" />
+        android:paddingBottom="4dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        tools:text="asdf"
+        android:background="@color/white"
+        android:layout_marginBottom="2dp"/>
 
 </LinearLayout>
