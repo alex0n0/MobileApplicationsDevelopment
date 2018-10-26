@@ -56,53 +56,215 @@ public abstract class QuizRoomDatabase extends RoomDatabase {
             // Not needed if you only populate on creation.
             mDao.deleteAll();
 
-            Quiz quiz = new Quiz(1, 1, true, false, 1,"question 1", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+            Quiz quiz = new Quiz(1, 1, false, false,
+                    2,
+                    "There can be only one activity in an app.",
+                    "True",
+                    "False",
+                    "",
+                    "",
+                    "");
             mDao.insert(quiz);
-            quiz = new Quiz(2, 1, true, false, 1,"question 2", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+
+            quiz = new Quiz(2, 1, false, false,
+                    1,
+                    "Each activity can be given a window to draw a user interface.",
+                    "True",
+                    "False",
+                    "",
+                    "",
+                    "");
             mDao.insert(quiz);
-            quiz = new Quiz(3, 1, true, false, 2,"question 3", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+
+            quiz = new Quiz(3, 1, true, false,
+                    3,
+                    "What is an activity in Android?",
+                    "Screen UI",
+                    "It manages application content.",
+                    "It performs actions on screen.",
+                    "None of the above",
+                    "");
             mDao.insert(quiz);
-            quiz = new Quiz(4, 1, true, false, 2,"question 4", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+
+            quiz = new Quiz(4, 1, true, false,
+                    2,
+                    "A(n) ______ provides a screen for users to interact with to do something.",
+                    "Method",
+                    "Activity",
+                    "Layout",
+                    "User map",
+                    "");
             mDao.insert(quiz);
-            quiz = new Quiz(5, 1, true, false, 3,"question 5", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+
+            quiz = new Quiz(5, 1, false, false,
+                    2,
+                    "An activity has to have a default layout.",
+                    "True",
+                    "False",
+                    "",
+                    "",
+                    "An activity’s layout file can be customised.");
             mDao.insert(quiz);
 
 
 
-            quiz = new Quiz(6, 2, false, false, 1,"question 1", "true", "false", "", "", "something");
-            mDao.insert(quiz);
-            quiz = new Quiz(7, 2, false, false, 1,"question 2", "true", "false", "", "", "something");
-            mDao.insert(quiz);
-            quiz = new Quiz(8, 2, false, false, 2,"question 3", "true", "false", "", "", "something");
-            mDao.insert(quiz);
-            quiz = new Quiz(9, 2, false, false, 2,"question 4", "true", "false", "", "", "something");
-            mDao.insert(quiz);
-            quiz = new Quiz(10, 2, false, false, 1,"question 5", "true", "false", "", "", "something");
-            mDao.insert(quiz);
-            Log.d("Insert", "is this working");
 
-
-            quiz = new Quiz(11, 3, true, false, 2,"question 1", "random option 1", "random option 2", "random option 3", "random option 4", "something");
-            mDao.insert(quiz);
-            quiz = new Quiz(12, 3, true, false, 1,"question 2", "random option 1", "random option 2", "random option 3", "random option 4", "something");
-            mDao.insert(quiz);
-            quiz = new Quiz(13, 3, true, false, 1,"question 3", "random option 1", "random option 2", "random option 3", "random option 4", "something");
-            mDao.insert(quiz);
-            quiz = new Quiz(14, 3, true, false, 4,"question 4", "random option 1", "random option 2", "random option 3", "random option 4", "something");
-            mDao.insert(quiz);
-            quiz = new Quiz(15, 3, true, false, 3,"question 5", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+            quiz = new Quiz(6, 2, true, false,
+                    3,
+                    "On which thread services work in android?",
+                    "Worker thread",
+                    "Back thread",
+                    "Main thread",
+                    "Focus thread",
+                    "");
             mDao.insert(quiz);
 
-            quiz = new Quiz(16, 4, true, false, 2,"question 1", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+            quiz = new Quiz(7, 2, false, false,
+                    2,
+                    "A singleton class can create multiple objects.",
+                    "True",
+                    "False",
+                    "",
+                    "",
+                    "A singleton class can only create one object.");
             mDao.insert(quiz);
-            quiz = new Quiz(17, 4, true, false, 1,"question 2", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+
+            quiz = new Quiz(8, 2, true, false,
+                    3,
+                    "What is the use of a content provider?",
+                    "To store information.",
+                    "To create UI.",
+                    "To share data between activities.",
+                    "To stop services.",
+                    "");
             mDao.insert(quiz);
-            quiz = new Quiz(18, 4, true, false, 1,"question 3", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+
+            quiz = new Quiz(9, 2, false, false,
+                    1,
+                    "The onCreate() method is called when creating your activity.",
+                    "True",
+                    "False",
+                    "",
+                    "",
+                    "");
             mDao.insert(quiz);
-            quiz = new Quiz(19, 4, true, false, 4,"question 4", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+
+            quiz = new Quiz(10, 2, true, false,
+                    4,
+                    "What must be called to define the layout for an activity?",
+                    "setLayout()",
+                    "attachContent()",
+                    "attachContentView()",
+                    "setContentView()",
+                    "");
             mDao.insert(quiz);
-            quiz = new Quiz(20, 4, true, false, 3,"question 5", "random option 1", "random option 2", "random option 3", "random option 4", "something");
+
+
+
+            quiz = new Quiz(11, 3, false, false,
+                    2,
+                    "Service class is the parent class of activity.",
+                    "True",
+                    "False",
+                    "",
+                    "",
+                    "It is object class that is the parent.");
             mDao.insert(quiz);
+
+            quiz = new Quiz(12, 3, true, false,
+                    1,
+                    "Which is not a state an activity can exist in?",
+                    "Destroyed",
+                    "Resumed",
+                    "Paused",
+                    "Stopped",
+                    "");
+            mDao.insert(quiz);
+
+            quiz = new Quiz(13, 3, true, false,
+                    4,
+                    "What is JSON in android?",
+                    "Java Script Object Note",
+                    "Java Script Oriented Native",
+                    "Java Source Objection Notation",
+                    "Java Script Object Notation",
+                    "");
+            mDao.insert(quiz);
+
+            quiz = new Quiz(14, 3, false, false,
+                    1,
+                    "onCreate() is followed by onStart().",
+                    "True",
+                    "False",
+                    "",
+                    "",
+                    "");
+            mDao.insert(quiz);
+
+            quiz = new Quiz(15, 3, false, false,
+                    1,
+                    "You declare activities in the manifest file.",
+                    "True",
+                    "False",
+                    "",
+                    "",
+                    "");
+            mDao.insert(quiz);
+
+
+
+
+            quiz = new Quiz(16, 4, true, false,
+                    3,
+                    "When an activity is stopped, what happened?",
+                    "It is partially visible.",
+                    "The activity was duplicated.",
+                    "It is completely obscured from view.",
+                    "None of the above.",
+                    "");
+            mDao.insert(quiz);
+
+            quiz = new Quiz(17, 4, false, false,
+                    2,
+                    "onStop() is the final method called before activity destruction.",
+                    "True",
+                    "False",
+                    "",
+                    "",
+                    "onDestroy() is the final method to be called before activity destruction.");
+            mDao.insert(quiz);
+
+            quiz = new Quiz(18, 4, true, false,
+                    3,
+                    "If a stopped activity starts again, what is called first?",
+                    "onStart()",
+                    "onReboot()",
+                    "onRestart()",
+                    "onStop()",
+                    "");
+            mDao.insert(quiz);
+
+            quiz = new Quiz(19, 4, true, false,
+                    4,
+                    "Which method may be called multiple times the app comes back from the paused state?",
+                    "onStart()",
+                    "onContinue()",
+                    "onState()",
+                    "onResume()",
+                    "");
+            mDao.insert(quiz);
+
+            quiz = new Quiz(20, 4, false, false,
+                    1,
+                    "The resumed state is often called the running state.",
+                    "True",
+                    "False",
+                    "",
+                    "",
+                    "");
+            mDao.insert(quiz);
+
+
 
             quiz = new Quiz(21, 5, true, false,
                     2,
