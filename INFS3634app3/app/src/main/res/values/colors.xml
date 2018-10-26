@@ -18,4 +18,15 @@
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
 
+
+    <color name="myLeaves">#6D9352</color>
+
+    <color name="myPrimaryDark">#58816F</color>
+    <color name="myPrimaryBase">#A0CEBA</color>
+    <color name="myPrimaryLight">#58816F</color>
+    <color name="myComplimentDark">#81534B</color>
+    <color name="myComplimentLight">#CEA7A0</color>
+    <color name="myAccent">#ff6d00</color>
+
+
 </resources>
