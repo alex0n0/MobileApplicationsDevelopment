@@ -16,7 +16,7 @@ public class HomeActivity extends NavigationDrawerBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
-        appBarTxt.setText("Home");
+        appBarTxt.setText("Activities App");
 
         Button buttonContent = findViewById(R.id.button3);
         Button buttonVideos = findViewById(R.id.button4);

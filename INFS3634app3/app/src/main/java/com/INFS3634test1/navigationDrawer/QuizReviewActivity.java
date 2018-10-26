@@ -67,8 +67,6 @@ public class QuizReviewActivity extends NavigationDrawerBaseActivity {
     }
 
     @Override public void onBackPressed() {
-//        if (drawer.isDrawerOpen(GravityCompat.START))
-//            drawer.closeDrawer(GravityCompat.START);
         Intent intent = new Intent(QuizReviewActivity.this, QuizResultsActivity.class);
         intent.putExtra("KEYCORRECT", correctCount);
         intent.putExtra("KEYTOTAL", questionCount);

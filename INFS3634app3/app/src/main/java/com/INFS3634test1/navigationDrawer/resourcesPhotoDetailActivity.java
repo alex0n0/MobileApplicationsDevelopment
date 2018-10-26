@@ -15,6 +15,14 @@ import static com.INFS3634test1.navigationDrawer.NavigationDrawerBaseActivity.PH
 
 
 public class resourcesPhotoDetailActivity extends NavigationDrawerBaseActivity {
+    @Override public void onBackPressed() {
+//        if (drawer.isDrawerOpen(GravityCompat.START))
+//            drawer.closeDrawer(GravityCompat.START);
+        Intent intent = new Intent(resourcesPhotoDetailActivity.this, ResourcesActivity.class);
+        finish();
+        Log.i(TAG_N, "Back button pressed.");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

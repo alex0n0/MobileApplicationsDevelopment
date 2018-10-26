@@ -24,7 +24,8 @@
     <color name="myPrimaryDark">#58816F</color>
     <color name="myPrimaryBase">#A0CEBA</color>
     <color name="myPrimaryLight">#E0FFF1</color>
-    <color name="myComplimentDark">#81534B</color>
+    <color name="myComplimentDark2">#81534B</color>
+    <color name="myComplimentDark">#4A251E</color>
     <color name="myComplimentLight">#CEA7A0</color>
     <color name="myAccent">#ff6d00</color>
 

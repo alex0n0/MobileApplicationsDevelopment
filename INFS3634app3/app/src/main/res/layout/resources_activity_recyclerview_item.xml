@@ -19,8 +19,9 @@
         android:id="@+id/resourceTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_weight="2"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="@color/black" />
 </LinearLayout>
