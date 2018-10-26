@@ -31,7 +31,7 @@ public class QuizResultsActivity extends NavigationDrawerBaseActivity {
         correctArray = intent.getBooleanArrayExtra("KEYCORRECTARRAY");
 
         TextView tv_result = findViewById(R.id.tv_result);
-        String message = "your result is " + correctCount + "/" + questionCount;
+        String message = "Your result is " + correctCount + "/" + questionCount;
         tv_result.setText(message);
 
     }
