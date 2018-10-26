@@ -1,7 +1,7 @@
 # MobileApplicationsDevelopment
 INFS3634 App READ ME & General Guidelines
 
-Optimised for Android 5.0 (Lollipop) and above.
+Optimised for Android 5.0 (Lollipop) API Level 21 and above.
 Best experienced on a mobile device.
 
 Overall Features and Functions
@@ -10,7 +10,7 @@ Overall Features and Functions
 2.	Topic content is separated into modules, with text and a YouTube video to accompany through the YouTube API. A YouTube playlist of all videos can also be found in a single place for easy access.
 3.	A multiple-choice quiz utilising a room database which randomised answers, so answers were in different spots and not repeated from the recyclerview.
 4.	Feedback is given through an overall mark and also a review process which allows students to gain a complete understanding of which questions were correct/incorrect.
-5.	A Flickr API is implemented to provide additional resources for students, through images.
+5.	A Flickr API is implemented to provide additional visual resources for students, through images such as diagrams.
 6.	A consistent colour scheme and easy to use layout for great UX.
 
 
