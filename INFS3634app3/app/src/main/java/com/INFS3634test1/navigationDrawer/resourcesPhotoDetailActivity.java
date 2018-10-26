@@ -28,6 +28,8 @@ public class resourcesPhotoDetailActivity extends NavigationDrawerBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resources_activity_photodetail);
 
+        appBarTxt.setText("Visual Resources");
+
         Intent intent = getIntent();
         resourcesActivityPhoto photo = (resourcesActivityPhoto) intent.getSerializableExtra(PHOTO_TRANSFER);
         if(photo != null){

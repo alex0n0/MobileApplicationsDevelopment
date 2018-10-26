@@ -35,17 +35,16 @@ public class SearchActivity extends NavigationDrawerBaseActivity {
         appBarTxt.setText("Contact Us");
         Log.d(TAG, "onCreate: starts");
 
-        Button buttonBack = findViewById(R.id.searchActivityBack);
+//        Button buttonBack = findViewById(R.id.searchActivityBack);
+//        buttonBack.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(SearchActivity.this, HomeActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
         Button buttonEmail = findViewById(R.id.searchEmailButton);
-
-        buttonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
-
         buttonEmail.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

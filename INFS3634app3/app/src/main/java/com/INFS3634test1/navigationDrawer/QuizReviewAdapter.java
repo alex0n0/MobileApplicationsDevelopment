@@ -1,6 +1,7 @@
 package com.INFS3634test1.navigationDrawer;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,6 +54,8 @@ public class QuizReviewAdapter extends RecyclerView.Adapter<QuizReviewAdapter.Qu
         s = "Question " + (position + 1) + "\n\n" + current.toString();
         holder.tv_review_question.setText(s);
         holder.tv_review_result.setText(mQuizResults[position] ? "Correct" : "Incorrect");
+        holder.tv_review_result.setTextColor(Color.parseColor(mQuizResults[position] ? "#00FF00" : "#FF0000"));
+
         String answer;
         switch (current.getAnswer()) {
             case 1:

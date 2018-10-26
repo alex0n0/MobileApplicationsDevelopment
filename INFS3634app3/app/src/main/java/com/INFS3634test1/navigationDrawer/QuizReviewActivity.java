@@ -34,7 +34,6 @@ public class QuizReviewActivity extends NavigationDrawerBaseActivity {
 
         appBarTxt.setText("Module Quiz");
 
-
         Intent intent = getIntent();
         correctCount = intent.getIntExtra("KEYCORRECT", 0);
         questionCount = intent.getIntExtra("KEYTOTAL", 0);

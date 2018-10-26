@@ -30,6 +30,7 @@
         android:paddingTop="4dp"
         android:textAlignment="center"
         tools:text="asdf"
+        android:textStyle="bold"
         android:background="@color/white"/>
 
     <TextView

@@ -29,12 +29,14 @@ public class QuizTestActivity extends NavigationDrawerBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_test);
 
-        appBarTxt.setText("Module Quiz");
-
 
 
         Intent intent = getIntent();
         final int topic = intent.getIntExtra("TOPIC_TEST", -1);
+        
+
+
+        appBarTxt.setText("Module Quiz");
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview_test);
         final QuizTestAdapter adapter = new QuizTestAdapter(this);
